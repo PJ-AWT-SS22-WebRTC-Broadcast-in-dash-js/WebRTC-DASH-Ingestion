@@ -6,9 +6,6 @@ services:
       dockerfile: Dockerfile
     networks:
       - aries
-    environment:
-      - "ACAPY_ADMIN=${ACAPY_ADMIN}"
-      - "INITIATOR_CONTROLLER=${INITIATOR_CONTROLLER}"
     ports:
       - "3104:3104"
   whip:
@@ -17,12 +14,10 @@ services:
       dockerfile: Dockerfile
     networks:
       - aries
-    environment:
-      - "ACAPY_ADMIN=${ACAPY_ADMIN}"
-      - "INITIATOR_CONTROLLER=${INITIATOR_CONTROLLER}"
     depends_on:
       - "ull"
     ports:
-      - "3104:3104"
+      - "1234:1234"
+      - "8000:8000"
 networks:
   aries:
