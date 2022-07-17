@@ -8,6 +8,7 @@ services:
       - aries
     ports:
       - "3104:3104"
+      - "8080:8080"
   whip:
     build: 
       context: ./whip
