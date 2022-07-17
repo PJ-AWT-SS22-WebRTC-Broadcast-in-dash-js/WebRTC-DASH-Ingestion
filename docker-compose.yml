@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  ull:
+    build: 
+      context: ./ull
+      dockerfile: Dockerfile
+    networks:
+      - aries
+    environment:
+      - "ACAPY_ADMIN=${ACAPY_ADMIN}"
+      - "INITIATOR_CONTROLLER=${INITIATOR_CONTROLLER}"
+    ports:
+      - "3104:3104"
+  whip:
+    build: 
+      context: ./whip
+      dockerfile: Dockerfile
+    networks:
+      - aries
+    environment:
+      - "ACAPY_ADMIN=${ACAPY_ADMIN}"
+      - "INITIATOR_CONTROLLER=${INITIATOR_CONTROLLER}"
+    depends_on:
+      - "ull"
+    ports:
+      - "3104:3104"
+networks:
+  aries:

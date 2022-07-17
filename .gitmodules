@@ -1,0 +1,6 @@
+[submodule "ull"]
+	path = ull
+	url = https://github.com/PJ-AWT-SS22-WebRTC-Broadcast-in-dash-js/ull
+[submodule "whip"]
+	path = whip
+	url = https://github.com/PJ-AWT-SS22-WebRTC-Broadcast-in-dash-js/whip
